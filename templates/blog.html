@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style = "text-align:center">Blog Posts</h1>
+    {% for post in posts %}
+        <h2><a href='/blog?id={{post.id}}'>{{post.blog_title}}</a></h2>
+        <p>{{post.blog_content}}</p>
+        {% for user in users %}
+            {% if post.owner.id == user.id %}
+                <p><em>Written by <a href='/blog?user={{user.username}}'>{{user.username}}</em><p>
+            {% endif %}
+        {% endfor %}
+        <hr />
+    {% endfor %}
+{% endblock %}

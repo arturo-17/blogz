@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 style = "text-align:center">Add a Blog Entry</h1>
+    <form action="/blog" method="post">
+        <label for="blog_entry_title">Blog Entry Title:</label><br>
+        <input name="blog_entry_title" type="text"><br><br>
+        <label for="blog_entry_content">Blog Entry Content:</label><br>
+        <textarea name="blog_entry_content" rows="5"></textarea><br><br>
+        <input type="submit" value="Add Entry"><br>
+    </form>
+{% endblock %}

@@ -1,0 +1,87 @@
+html{
+    background-color: #ededed;
+}
+
+body{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #ededed;
+}
+
+a:link{
+    text-decoration: none;
+    color: #000;
+}
+
+a:visited{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    text-decoration: none;
+    color: #000;
+    background-color: #bbb;
+}
+
+.nav{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+
+.error{
+    color: #f00;
+}
+
+.message{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #ccc;
+    text-align: center;
+}
+
+.form{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #eee;
+
+}
+.form label{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #ccc;
+}
+.form input{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee;
+}
+.form textarea{
+    width: 100%;
+    margin: 0 auto;
+    background-color: #eee;
+}
+
+.post{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #eee;
+}
+.post h2{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #ddd;
+}
+.post p{
+    width: 100%;
+    margin-bottom: 15px;
+    background-color: #eee;
+}
+
+.bottom_nav{
+    max-width: 80%;
+    margin: 0 auto;
+    background-color: #ededed;
+    text-align: center;
+}
