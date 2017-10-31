@@ -51,7 +51,6 @@ def login():
 
         if user and user.password == password:
             session['username'] = username
-            #flash("Welcome back, " + username)
             return redirect('/newpost')
         else:
             login_error = "No user by this username or password is incorrect"
@@ -76,29 +75,24 @@ def signup():
 
         if len(username) < 3 or len(username) > 20:
             flash('please enter a user name more then 3 characters')
-            #username_error = "Please enter a username between 3 and 50 chr"
 
             return render_template("signup.html", username_error=username_error)
 
         if " " in username:
             flash('Username cannot contain spaces')
 
-            #username_error = "Username cannot contain spaces"
             return render_template("signup.html", username_error=username_error)
 
         if len(password) < 3 or len(password) > 20:
             flash('Please enter a password between 3 and 50 chr')
-            #password_error = "Please enter a password between 3 and 50 chr"
             return render_template("signup.html", password_error=password_error)
 
         if " " in password:
             flash('password cannot have spaces')
-            #password_error = "Password cannot contain space"
             return render_template("signup.html", password_error=password_error)
 
         if password != verify_password:
             flash('passowords dont match')
-            #verify_password_error = "Password and verify password must be the same"
             return render_template("signup.html", verify_password_error=verify_password_error)
 
         existing_user = User.query.filter_by(username=username).first()
